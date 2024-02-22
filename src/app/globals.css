@@ -1,0 +1,21 @@
+@import url(../assets/fonts/all-fonts.css);
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --PlusJakarta-extraLight: "PlusJakartaSans200";
+  --PlusJakarta-light: "PlusJakartaSans300";
+  --PlusJakarta-regular: "PlusJakartaSans400";
+  --PlusJakarta-medium: "PlusJakartaSans500";
+  --PlusJakarta-semibold: "PlusJakartaSans600";
+  --PlusJakarta-bold: "PlusJakartaSans700";
+  --PlusJakarta-extraBold: "PlusJakartaSans800";
+  --white: white;
+  --black: black;
+}
+
+body {
+  color: var(--black);
+  background: var(--white);
+}
