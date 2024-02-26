@@ -13,9 +13,18 @@
   --PlusJakarta-extraBold: "PlusJakartaSans800";
   --white: white;
   --black: black;
+  --body: #F5F5F7;
+  --body-light: #FAFAFA;
+  --sidebar-text: #8E92BC;
+  --secondry-text: #54577A;
+  ;
 }
 
 body {
   color: var(--black);
-  background: var(--white);
+  background: var(--body);
+}
+
+.react-calendar button span div abbr {
+  font-family: var(--PlusJakarta-semibold) !important;
 }

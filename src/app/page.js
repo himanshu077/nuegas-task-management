@@ -1,54 +1,146 @@
 "use client";
 import React from "react";
 import Box from "@mui/material/Box";
-import Typography from "@mui/material/Typography";
-import Drawer from "@mui/material/Drawer";
-import Button from "@mui/material/Button";
-import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
-import ListItemButton from "@mui/material/ListItemButton";
-import ListItemIcon from "@mui/material/ListItemIcon";
-import ListItemText from "@mui/material/ListItemText";
-import InboxIcon from "@mui/icons-material/MoveToInbox";
-import MailIcon from "@mui/icons-material/Mail";
+import {
+  Grid,
+  IconButton,
+  List,
+  ListItem,
+  ListItemButton,
+  ListItemIcon,
+  ListItemText,
+  Typography,
+} from "@mui/material";
+import OverView from "@/assets/svg/OverView.svg";
+import Mentors from "@/assets/svg/Mentors.svg";
+import Tasks from "@/assets/svg/Tasks.svg";
+import Settings from "@/assets/svg/Settings.svg";
+import Message from "@/assets/svg/Message.svg";
+import Profile from "@/assets/svg/Profile.svg";
+import Notification from "@/assets/svg/Notification.svg";
+import NuegasLogo from "@/assets/svg/NuegasLogo.svg";
+import Image from "next/image";
+import Calendar from "@/common/Calendar/Calendar";
 
 const page = () => {
-  const [open, setOpen] = React.useState(true);
-
-  const toggleDrawer = (newOpen) => () => {
-    setOpen(newOpen);
-  };
-
-  const DrawerList = (
-    <Box sx={{ width: 250 }} role="presentation" onClick={toggleDrawer(false)}>
-      <List>
-        {["Overview", "Task", "Mentors", "Message", "Settings"].map(
-          (text, index) => (
-            <ListItem key={text} disablePadding>
-              <ListItemButton>
-                <ListItemIcon>
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                </ListItemIcon>
-                <ListItemText primary={text} />
-              </ListItemButton>
-            </ListItem>
-          )
-        )}
-      </List>
-    </Box>
-  );
-
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <Box>
-        <Typography className="PlusJakartaSans700">Main App</Typography>
-      </Box>
-      <div>
-        <Button onClick={toggleDrawer(true)}>Main App</Button>
-        <Drawer open={open} onClose={toggleDrawer(false)}>
-          {DrawerList}
-        </Drawer>
-      </div>
+    <main className=" min-h-screen ">
+      {/* <Box className="flex">
+        <Box className="border-2 border-red-600  !min-h-[600px] !w-full !grid !grid-cols-2"></Box>
+        <Box className="border-2 border-green-600 !min-h-[600px] !w-full !grid !grid-cols-7"></Box>
+        <Box className="border-2 border-blue-600 !min-h-[600px] !w-full !grid !grid-cols-3"></Box>
+      </Box> */}
+
+      <Grid container spacing={2}>
+        <Grid item xs={2}>
+          <Box className="!h-screen !bg-[--white] !min-w-[252px] !p-8">
+            <Box>
+              <Image src={NuegasLogo} alt="NuegasLogo" />
+            </Box>
+
+            <Box role="presentation ">
+              <List className="!mt-14 !p-0">
+                <ListItem className="!p-0">
+                  <ListItemButton className="PlusJakartaSans700 hover:!bg-[--body] !py-[10px] hover:!text-black">
+                    <ListItemIcon>
+                      <Image src={OverView} alt="OverView" />
+                    </ListItemIcon>
+                    <ListItemText
+                      className="!font-bold !text-[--sidebar-text] hover:!text-black"
+                      primary="Overview"
+                    />
+                  </ListItemButton>
+                </ListItem>
+
+                <ListItem className="!px-0 !py-2">
+                  <ListItemButton className="PlusJakartaSans700 hover:!bg-[--body] hover:!text-black">
+                    <ListItemIcon>
+                      <Image src={Tasks} alt="Tasks" />
+                    </ListItemIcon>
+                    <ListItemText
+                      className="!font-bold !text-[--sidebar-text] hover:!text-black"
+                      primary="Tasks"
+                    />
+                  </ListItemButton>
+                </ListItem>
+
+                <ListItem className="!px-0 !py-2">
+                  <ListItemButton className="PlusJakartaSans700 hover:!bg-[--body] hover:!text-black">
+                    <ListItemIcon>
+                      <Image src={Mentors} alt="Mentors" />
+                    </ListItemIcon>
+                    <ListItemText
+                      className="!font-bold !text-[--sidebar-text] hover:!text-black"
+                      primary="Mentors"
+                    />
+                  </ListItemButton>
+                </ListItem>
+
+                <ListItem className="!px-0 !py-2">
+                  <ListItemButton className="PlusJakartaSans700 hover:!bg-[--body] hover:!text-black">
+                    <ListItemIcon>
+                      <Image src={Message} alt="Message" />
+                    </ListItemIcon>
+                    <ListItemText
+                      className="!font-bold !text-[--sidebar-text] hover:!text-black"
+                      primary="Message"
+                    />
+                  </ListItemButton>
+                </ListItem>
+
+                <ListItem className="!px-0 !py-2">
+                  <ListItemButton className="PlusJakartaSans700 hover:!bg-[--body] hover:!text-black">
+                    <ListItemIcon>
+                      <Image src={Settings} alt="Settings" />
+                    </ListItemIcon>
+                    <ListItemText
+                      className="!font-bold !text-[--sidebar-text] hover:!text-black"
+                      primary="Settings"
+                    />
+                  </ListItemButton>
+                </ListItem>
+              </List>
+            </Box>
+          </Box>
+        </Grid>
+        <Grid item xs={7}>
+          <Box className="border-2 !p-8 !bg-[--body-light] border-green-600 ">
+            <Box className="!flex !items-center !justify-between">
+              <Box className="!grid !gap-3">
+                <Typography
+                  variant="h1"
+                  className="PlusJakartaSans700 !text-2xl !leading-9"
+                >
+                  Hi, Skylar Dias
+                </Typography>
+                <Typography
+                  variant="h6"
+                  className="!text-[--secondry-text] PlusJakartaSans500 !text-base !leading-6"
+                >
+                  Let's finish your task today!
+                </Typography>
+              </Box>
+
+              <Box className="!flex !items-center !gap-6">
+                <IconButton>
+                  <Image src={Notification} alt="Notification" />
+                </IconButton>
+
+                <Image src={Profile} alt="Profile" />
+              </Box>
+            </Box>
+          </Box>
+        </Grid>
+        <Grid item xs={3}>
+          <Box className="border-2 border-blue-600 !p-8 !bg-[--body]">
+            <Calendar />
+          </Box>
+        </Grid>
+      </Grid>
+
+      {/* <Typography variant="h1" className="PlusJakartaSans700">
+        Main App
+      </Typography> */}
     </main>
   );
 };
