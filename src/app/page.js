@@ -21,6 +21,8 @@ import Notification from "@/assets/svg/Notification.svg";
 import NuegasLogo from "@/assets/svg/NuegasLogo.svg";
 import Image from "next/image";
 import Calendar from "@/common/Calendar/Calendar";
+import RunningTrackUi from "@/common/RunningUI/RunningTrackUi";
+import Activity from "@/components/Activity";
 
 const page = () => {
   return (
@@ -40,65 +42,71 @@ const page = () => {
 
             <Box role="presentation ">
               <List className="!mt-14 !p-0">
-                <ListItem className="!p-0">
-                  <ListItemButton className="PlusJakartaSans700 hover:!bg-[--body] !py-[10px] hover:!text-black">
-                    <ListItemIcon>
-                      <Image src={OverView} alt="OverView" />
-                    </ListItemIcon>
-                    <ListItemText
-                      className="!font-bold !text-[--sidebar-text] hover:!text-black"
-                      primary="Overview"
-                    />
-                  </ListItemButton>
-                </ListItem>
-
-                <ListItem className="!px-0 !py-2">
-                  <ListItemButton className="PlusJakartaSans700 hover:!bg-[--body] hover:!text-black">
-                    <ListItemIcon>
-                      <Image src={Tasks} alt="Tasks" />
-                    </ListItemIcon>
-                    <ListItemText
-                      className="!font-bold !text-[--sidebar-text] hover:!text-black"
-                      primary="Tasks"
-                    />
-                  </ListItemButton>
-                </ListItem>
-
-                <ListItem className="!px-0 !py-2">
-                  <ListItemButton className="PlusJakartaSans700 hover:!bg-[--body] hover:!text-black">
-                    <ListItemIcon>
-                      <Image src={Mentors} alt="Mentors" />
-                    </ListItemIcon>
-                    <ListItemText
-                      className="!font-bold !text-[--sidebar-text] hover:!text-black"
-                      primary="Mentors"
-                    />
-                  </ListItemButton>
-                </ListItem>
-
-                <ListItem className="!px-0 !py-2">
-                  <ListItemButton className="PlusJakartaSans700 hover:!bg-[--body] hover:!text-black">
-                    <ListItemIcon>
-                      <Image src={Message} alt="Message" />
-                    </ListItemIcon>
-                    <ListItemText
-                      className="!font-bold !text-[--sidebar-text] hover:!text-black"
-                      primary="Message"
-                    />
-                  </ListItemButton>
-                </ListItem>
-
-                <ListItem className="!px-0 !py-2">
-                  <ListItemButton className="PlusJakartaSans700 hover:!bg-[--body] hover:!text-black">
-                    <ListItemIcon>
-                      <Image src={Settings} alt="Settings" />
-                    </ListItemIcon>
-                    <ListItemText
-                      className="!font-bold !text-[--sidebar-text] hover:!text-black"
-                      primary="Settings"
-                    />
-                  </ListItemButton>
-                </ListItem>
+                <a href="/">
+                  <ListItem className="!p-0">
+                    <ListItemButton className="PlusJakartaSans700 hover:!bg-[--body] hover:rounded-lg !py-[10px] hover:!text-black">
+                      <ListItemIcon>
+                        <Image src={OverView} alt="OverView" />
+                      </ListItemIcon>
+                      <ListItemText
+                        className="!font-bold !text-[--sidebar-text] hover:!text-black"
+                        primary="Overview"
+                      />
+                    </ListItemButton>
+                  </ListItem>
+                </a>
+                <a href="/tasks">
+                  <ListItem className="!px-0 !py-2">
+                    <ListItemButton className="PlusJakartaSans700 hover:!bg-[--body] hover:rounded-lg hover:!text-black">
+                      <ListItemIcon>
+                        <Image src={Tasks} alt="Tasks" />
+                      </ListItemIcon>
+                      <ListItemText
+                        className="!font-bold !text-[--sidebar-text] hover:!text-black"
+                        primary="Tasks"
+                      />
+                    </ListItemButton>
+                  </ListItem>
+                </a>
+                <a href="/mentors">
+                  <ListItem className="!px-0 !py-2">
+                    <ListItemButton className="PlusJakartaSans700 hover:!bg-[--body] hover:rounded-lg hover:!text-black">
+                      <ListItemIcon>
+                        <Image src={Mentors} alt="Mentors" />
+                      </ListItemIcon>
+                      <ListItemText
+                        className="!font-bold !text-[--sidebar-text] hover:!text-black"
+                        primary="Mentors"
+                      />
+                    </ListItemButton>
+                  </ListItem>
+                </a>
+                <a href="/message">
+                  <ListItem className="!px-0 !py-2">
+                    <ListItemButton className="PlusJakartaSans700 hover:!bg-[--body] hover:rounded-lg hover:!text-black">
+                      <ListItemIcon>
+                        <Image src={Message} alt="Message" />
+                      </ListItemIcon>
+                      <ListItemText
+                        className="!font-bold !text-[--sidebar-text] hover:!text-black"
+                        primary="Message"
+                      />
+                    </ListItemButton>
+                  </ListItem>
+                </a>
+                <a href="/settings">
+                  <ListItem className="!px-0 !py-2">
+                    <ListItemButton className="PlusJakartaSans700 hover:!bg-[--body] hover:rounded-lg hover:!text-black">
+                      <ListItemIcon>
+                        <Image src={Settings} alt="Settings" />
+                      </ListItemIcon>
+                      <ListItemText
+                        className="!font-bold !text-[--sidebar-text] hover:!text-black"
+                        primary="Settings"
+                      />
+                    </ListItemButton>
+                  </ListItem>
+                </a>
               </List>
             </Box>
           </Box>
@@ -128,6 +136,10 @@ const page = () => {
 
                 <Image src={Profile} alt="Profile" />
               </Box>
+            </Box>
+            <Box className="!flex !mt-12">
+              <RunningTrackUi />
+              <Activity />
             </Box>
           </Box>
         </Grid>
