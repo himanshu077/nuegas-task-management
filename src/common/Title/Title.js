@@ -6,8 +6,8 @@ import ArrowRight from "../../assets/svg/arrow-right.svg"
 
 const Title = ({ title }) => {
     return (
-        <Box className="!flex">
-            <Typography className='PlusJakartaSans600 !text-[--Secondary-500] !text-2xl'>{title}</Typography>
+        <Box className="!flex !justify-between">
+            <Typography className='PlusJakartaSans600 !text-[--Secondary-500] lg:!text-2xl !text-xl'>{title}</Typography>
             <Box className="!flex">
                 <Image src={ArrowLeft} alt='left'/>
                 <Image src={ArrowRight} alt='right'/>
