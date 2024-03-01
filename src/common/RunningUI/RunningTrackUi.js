@@ -3,7 +3,7 @@ import { Box, Typography, Grid } from "@mui/material"
 
 const RunningTrackUi = () => {
     return (
-        <Box className="!bg-[--Secondary-500] !rounded-xl !px-2 !py-3 !flex !flex-row lg:!flex-col">
+        <Box className="!bg-[--Secondary-500] !rounded-xl !px-2 !flex !flex-row lg:!flex-col">
             <Box>
                 <Typography className='!text-white PlusJakartaSans600 !text-base !mx-4 !my-3'>Running Task</Typography>
                 <Typography className='!text-white PlusJakartaSans600 !text-3xl !mx-4'>65</Typography>

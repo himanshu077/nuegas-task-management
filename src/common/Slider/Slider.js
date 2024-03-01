@@ -2,14 +2,18 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import Slider from '@mui/material/Slider';
 
-export default function Slider() {
+export default function Sliders() {
   return (
-    <Box sx={{ width: 300 }}>
+    <Box >
       <Slider
-        size="small"
         defaultValue={70}
         aria-label="Small"
         valueLabelDisplay="auto"
+        sx={{
+          color: '#546FFF',
+          height: 8,
+          maxWidth:324
+        }}
       />
     </Box>
   );
