@@ -4,8 +4,8 @@ import Image from "next/image";
 import Note from "../../assets/svg/Note.svg"
 import Star from "../../assets/svg/Star.svg"
 
-const ReviewCards = ({ src, alt, name, post, title, count, reviews, description,className }) => {
-    const titleColor = title === "Followed" ? "!text-[--Secondary-400]" :"!text-[--Primary-500]"
+const ReviewCards = ({ src, alt, name, post, title, count, reviews, description, className }) => {
+    const titleColor = title === "Followed" ? "!text-[--Secondary-400]" : "!text-[--Primary-500]"
 
     return (
         <Box className={`!bg-white !rounded-xl lg:!m-4 md:!m-3 !m-2 !px-3 !py-10 ${className}`}>
@@ -21,8 +21,8 @@ const ReviewCards = ({ src, alt, name, post, title, count, reviews, description,
                     <Typography className={`PlusJakartaSans500 !text-sm lg:!pl-14 !pl-4 lg:!pr-2 ${titleColor}`}>{title}</Typography>
                 </Box>
             </Box>
-            <Box>
-                <Typography>{description}</Typography>
+            <Box className="!mt-3">
+                <Typography className='PlusJakartaSans500 leading-6 lg:!pl-4 !pl-2 !text-xs !break-words !text-[--Secondary-400]'>{description}</Typography>
             </Box>
             <Box className="!flex !justify-between !pt-6 ">
                 <Box className="!flex !gap-1 lg:!px-2">

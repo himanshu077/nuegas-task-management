@@ -35,4 +35,4 @@ const TaskCards = ({ src, alt, title, subTitle, progressPercentage, leftDays,cla
     )
 }
 
-export default TaskCards
+export default TaskCards;
