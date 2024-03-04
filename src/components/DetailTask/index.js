@@ -21,7 +21,7 @@ const DetailTask = () => {
                 </Box>
             ))}
             <Box>
-                <PrimaryButton title="Go To Detail" className="!mx-6 !mt-10"/>
+                <PrimaryButton title="Go To Detail" className="!mx-5 !mt-10"/>
             </Box>
         </Box>
     )

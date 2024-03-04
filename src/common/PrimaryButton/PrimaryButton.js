@@ -1,23 +1,13 @@
 import React from 'react';
-import { Box, Button } from "@mui/material";
+import { Box } from "@mui/material";
 
 const PrimaryButton = ({ title, className }) => {
     return (
         <Box className={`${className}`}>
-            <Button
-                sx={{
-                    backgroundColor: '#546FFF',
-                    color: 'white',
-                    textTransform: 'capitalize',
-                    fontFamily: 'PlusJakartaSans500',
-                    fontSize: '0.875vh',
-                    padding: '0.65vw 16.5vh',
-                    fontWeight: '500'
-                }}
-                className='hover:!text-[--Secondary-500] !text-sm !font-medium'
+            <button className='!text-sm !font-medium !bg-[--Primary-500] !text-white xl:!px-[6.4vw] md:!px[4.5vw] !px-[2vh] !py-3 !rounded-lg'
             >
                 {title}
-            </Button>
+            </button>
         </Box>
     )
 }

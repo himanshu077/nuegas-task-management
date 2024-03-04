@@ -18,7 +18,7 @@ import HeaderSidebar from "@/common/HeaderSidebar/HeaderSidebar";
 import UpcomingTask from "@/components/UpcomingTask";
 
 const Page = () => {
-  const isLargeScreen = useMediaQuery('(min-width:1024px)');
+  const isLargeScreen = useMediaQuery('(min-width:1084px)');
 
   return (
     <main className="min-h-screen">
@@ -46,7 +46,7 @@ const Page = () => {
                 <Image src={Profile} alt="Profile" />
               </Box>
             </Box>
-            <Box className="!flex lg:!flex-row !justify-between !flex-col !mt-12">
+            <Box className="!flex lg:!flex-row lg:!gap-0 !gap-6 !justify-between !mx-[3vw] !flex-col !mt-12">
               <RunningTrackUi />
               <Activity />
             </Box>
@@ -55,7 +55,7 @@ const Page = () => {
           </Box>
         </Grid>
         <Grid item xs={isLargeScreen ? 3 : 12}>
-          <Box className="lg:!p-8 !p-4 !bg-[--body]">
+          <Box className="lg:!p-4 !p-4 !bg-[--body]">
             <Calendar />
             <Todaystask />
           </Box>

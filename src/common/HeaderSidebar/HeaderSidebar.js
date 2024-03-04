@@ -36,9 +36,9 @@ const HeaderSidebar = () => {
 
   return (
     <div>
-      <Box className="!flex !justify-between">
+      <Box className="!flex !py-3">
         <Button onClick={toggleDrawer(!open)}><MenuIcon className="!text-[--Secondary-500] !text-3xl" /></Button>
-        <Box className=" !flex !items-center !gap-2  ">
+        <Box className=" !flex !items-end !gap-2 !mt-2 ">
           <IconButton>
             <Image src={Notification} alt="Notification" />
           </IconButton>
@@ -57,7 +57,7 @@ const HeaderSidebar = () => {
                 <a href={item.path}>
                   <ListItemButton className="!p-2">
                     <Image src={item.src} alt={item.alt} />
-                    <ListItemText primary={item.title} sx={{ fontSize: 24, paddingLeft: 6 ,paddingRight:8}} />
+                    <ListItemText primary={item.title} sx={{ fontSize: 24, paddingLeft: 6, paddingRight: 8 }} />
                   </ListItemButton>
                 </a>
               </ListItem>
