@@ -28,7 +28,7 @@ const TaskCards = ({ src, alt, title, subTitle, progressPercentage, leftDays,cla
                     <Typography className='!pt-3'>{leftDays}</Typography>
                 </Box>
                 <Box>
-                    <Avatars avatars={avatars}/>
+                    {/* <Avatars avatars={avatars}/> */}
                 </Box>
             </Box>
         </Box>

@@ -1,5 +1,6 @@
 import React from 'react';
-import ReactApexChart from 'react-apexcharts';
+import dynamic from "next/dynamic";
+const ApexCharts = dynamic(() => import("react-apexcharts"), { ssr: false });
 
 const SplineAreaChart = () => {
   const series = [{
@@ -33,7 +34,7 @@ const SplineAreaChart = () => {
 
   return (
     <div className='!bg-white !w-full !h-full'>
-      <ReactApexChart options={options} series={series} type="line" height={130} className=" md:!w-[90vw] !w-full lg:!w-[25vw]"/>
+      <ApexCharts options={options} series={series} type="line" height={130} className=" md:!w-[90vw] !w-full lg:!w-[25vw]"/>
     </div>
   );
 };

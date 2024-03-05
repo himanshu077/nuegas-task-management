@@ -4,7 +4,7 @@ import Image from "next/image";
 import Note from "../../assets/svg/Note.svg"
 import Star from "../../assets/svg/Star.svg"
 
-const ReviewCards = ({ src, alt, name, post, title, count, reviews, description, className }) => {
+const ReviewCards = ({ src, alt, name, tag, title, count, reviews, description, className }) => {
     const titleColor = title === "Followed" ? "!text-[--Secondary-400]" : "!text-[--Primary-500]"
 
     return (
@@ -14,7 +14,7 @@ const ReviewCards = ({ src, alt, name, post, title, count, reviews, description,
                     <Image src={src} alt={alt} />
                     <Box>
                         <Typography className='PlusJakartaSans600 lg:!pl-4 !pl-2 !text-base !text-[--Secondary-500]'>{name}</Typography>
-                        <Typography className='PlusJakartaSans500 lg:!pl-4 !pl-2 !text-xs !text-[--Secondary-400]'>{post}</Typography>
+                        <Typography className='PlusJakartaSans500 lg:!pl-4 !pl-2 !text-xs !text-[--Secondary-400]'>{tag}</Typography>
                     </Box>
                 </Box>
                 <Box>
