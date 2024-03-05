@@ -5,27 +5,29 @@ import Image from 'next/image';
 
 const ChatBox = () => {
     return (
-        <div className=" w-full h-full bg-white ">
+        <div className="w-full h-full bg-white">
             {chatBoxData.map((data) => (
-                <Box key={data.id} className="flex !py-3 !px-4 !border-y !border-[--Activity-body]">
+                <a href='/message/chat' key={data.id}>
+                <Box key={data.id} className="flex py-3 px-4 border-y border-[--Activity-body]">
                     <Image src={data.src} alt="image" />
-                    <Box className="px-3 !flex">
-                        <Box className="flex !flex-col">
-                            <Typography className="font-semibold text-sm text-secondary-500">
+                    <Box className="px-3 flex flex-grow justify-between">
+                        <Box className="flex flex-col">
+                            <Typography className="font-semibold PlusJakartaSans500 text-sm text-secondary-500">
                                 {data.name}
                             </Typography>
-                            <Typography className="font-normal text-sm text-secondary-500">
+                            <Typography className="font-normal PlusJakartaSans400 text-sm text-secondary-500">
                                 {data.lastMessage}
                             </Typography>
                         </Box>
-                        <Box className="flex !flex-col ">
-                            <Typography className="font-light text-xs text-secondary-300">
+                        <Box className="!flex !flex-col !gap-2 !text-right !pt-3">
+                            <Typography className="font-light PlusJakartaSans500 text-xs text-secondary-300">
                                 {data.time}
                             </Typography>
-                            <Image src={data.isComplete} alt="completed" />
+                            <Image src={data.isComplete} alt="completed" className=''/>
                         </Box>
                     </Box>
                 </Box>
+                </a>
             ))}
         </div>
     );

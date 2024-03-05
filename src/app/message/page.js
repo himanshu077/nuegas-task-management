@@ -9,7 +9,7 @@ import Image from "next/image"
 import Profile from "@/assets/svg/Profile.svg";
 import SearchSvg from "@/assets/svg/SearchSvg.svg"
 import ChatBox from "@/components/ChatBox";
-import ChatArea from "@/components/ChatArea";
+import ChatArea from "@/app/message/chat/page";
 
 const Message = () => {
 
@@ -49,7 +49,7 @@ const Message = () => {
                             <ChatBox />
                         </Grid>
                         <Grid item xs={isLargeScreen ? 8.84 : 12}>
-                            <ChatArea />
+                            <Box className="!hidden lg:!inline"> <ChatArea /></Box>
                         </Grid>
                     </Grid>
                 </Grid>

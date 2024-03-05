@@ -8,13 +8,13 @@ const ReviewCards = ({ src, alt, name, tag, title, count, reviews, description, 
     const titleColor = title === "Followed" ? "!text-[--Secondary-400]" : "!text-[--Primary-500]"
 
     return (
-        <Box className={`!bg-white !rounded-xl lg:!m-4 md:!m-3 !m-2 !px-3 !py-10 ${className}`}>
-            <Box className="!flex">
+        <Box className={`!bg-white !rounded-xl lg:!m-4 md:!m-3 !px-3 !py-10 ${className}`}>
+            <Box className="!flex !justify-between">
                 <Box className="!flex">
-                    <Image src={src} alt={alt} />
+                    <Image src={src} alt={alt} className='!w-12 !h-12' />
                     <Box>
-                        <Typography className='PlusJakartaSans600 lg:!pl-4 !pl-2 !text-base !text-[--Secondary-500]'>{name}</Typography>
-                        <Typography className='PlusJakartaSans500 lg:!pl-4 !pl-2 !text-xs !text-[--Secondary-400]'>{tag}</Typography>
+                        <Typography variant='h3' className='PlusJakartaSans600 lg:!pl-4 !pl-2 !text-base !text-[--Secondary-500]'>{name}</Typography>
+                        <Typography variant='h6' className='PlusJakartaSans500 lg:!pl-4 !pl-2 !text-xs !text-[--Secondary-400]'>{tag}</Typography>
                     </Box>
                 </Box>
                 <Box>
@@ -27,11 +27,11 @@ const ReviewCards = ({ src, alt, name, tag, title, count, reviews, description, 
             <Box className="!flex !justify-between !pt-6 ">
                 <Box className="!flex !gap-1 lg:!px-2">
                     <Image src={Note} alt='note' />
-                    <Typography className='PlusJakartaSans500 !pt-[2px] !text-sm !text-[--Secondary-500]'>{count}Task</Typography>
+                    <Typography variant='h6' className='PlusJakartaSans500 !pt-[2px] !text-sm !text-[--Secondary-500]'>{count} Task</Typography>
                 </Box>
                 <Box className="!flex !gap-1 lg:!px-2">
                     <Image src={Star} alt='star' />
-                    <Typography className='PlusJakartaSans500 !pt-[2px] !text-sm !text-[--Secondary-500]'>{reviews}</Typography>
+                    <Typography variant='h6' className='PlusJakartaSans500 !pt-[2px] !text-sm !text-[--Secondary-500]'>{reviews}</Typography>
                 </Box>
             </Box>
         </Box>
