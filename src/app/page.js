@@ -26,10 +26,10 @@ const Page = () => {
         <Grid item xs={isLargeScreen ? 2 : false}>
           {isLargeScreen ? <Sidebar /> : <HeaderSidebar />}
         </Grid>
-        <Grid item xs={isLargeScreen ? 7 : 12}>
+        <Grid item xs={isLargeScreen ? 7 : 12} overflowX="auto">
           <Box className=" lg:!p-8 !p-4 !bg-[--body-light] ">
-            <Box className="!flex !items-center !justify-between">
-              <Box className="!grid !gap-3">
+            <Box className="!flex !items-center !justify-between md:!hidden">
+              <Box className="lg:!grid !gap-3 md:hidden">
                 <Typography variant="h1" className="PlusJakartaSans700 !text-2xl !leading-9">
                   Hi, Skylar Dias
                 </Typography>
@@ -37,7 +37,6 @@ const Page = () => {
                   Let's finish your tasks today!
                 </Typography>
               </Box>
-
               <Box className="lg:!flex !items-center !gap-6 !hidden ">
                 <IconButton>
                   <Image src={Notification} alt="Notification" />
@@ -46,7 +45,7 @@ const Page = () => {
                 <Image src={Profile} alt="Profile" />
               </Box>
             </Box>
-            <Box className="!flex lg:!flex-row lg:!gap-0 !gap-6 !justify-between !mx-[3vw] !flex-col !mt-12">
+            <Box className="!flex lg:!flex-row lg:!gap-0 !gap-6 !justify-between !mx-[1.1vw] !flex-col !mt-12">
               <RunningTrackUi />
               <Activity />
             </Box>

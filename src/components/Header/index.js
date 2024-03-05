@@ -15,7 +15,7 @@ const Header = ({ title }) => {
         <Box className="!bg-white !border-b !border-[--Activity-body]">
             <Box className="lg:!p-8 !p-4">
                 <Box className="!flex !items-center !justify-between">
-                    <Typography className='PlusJakartaSans600 !text-[--Secondary-500] !text-2xl !px-2'>Explore <span>{title}</span> </Typography>
+                    <Typography className='PlusJakartaSans600 !text-[--Secondary-500] !text-2xl !px-2'><span>{title}</span> </Typography>
                     <Box className="lg:!flex !items-center !gap-6 !hidden ">
                         <IconButton>
                             <Image src={Notification} alt="Notification" />

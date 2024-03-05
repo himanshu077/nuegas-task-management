@@ -10,17 +10,17 @@ const DetailTask = () => {
     ]
     return (
         <Box className="!bg-white rounded-xl !mt-1 !py-4">
-            <Box className="!flex !justify-between">
-                <Typography className='PlusJakartaSans500 !text-base !text-[--Secondary-500] !px-8 !font-semibold'>Detail Task</Typography>
-                <Typography className='PlusJakartaSans500 !text-xs !text-[--Secondary-400] !px-8 !font-medium'>UI / UX Designer</Typography>
+            <Box className="!flex !justify-between !py-4">
+                <Typography variant='h3' className='PlusJakartaSans500 !text-base !text-[--Secondary-500] !px-8 !font-semibold'>Detail Task</Typography>
+                <Typography variant='h6' className='PlusJakartaSans500 !text-xs !text-[--Secondary-400] !px-8 !font-medium'>UI / UX Designer</Typography>
             </Box>
             {data.map((index) => (
                 <Box key={index.id} className="!flex !px-6 !gap-2">
-                    <Typography className='!bg-[--Activity-body] !px-4 !py-2 PlusJakartaSans500 !text-sm !font-medium !text-[--Secondary-500] lg:!mb-2 !mb-4 !rounded-xl'>{index.id}</Typography>
-                    <Typography className=' PlusJakartaSans500 !text-sm !font-medium !text-[--Secondary-500] lg:!pt-2 md:pt-2'>{index.text}</Typography>
+                    <Typography variant='h6' className='!bg-[--Activity-body] !px-4 !py-2 PlusJakartaSans500 !text-sm !font-medium !text-[--Secondary-500] lg:!mb-2 !mb-4 !rounded-xl'>{index.id}</Typography>
+                    <Typography variant='h6' className=' PlusJakartaSans500 !text-sm !font-medium !text-[--Secondary-500] lg:!pt-2 md:pt-2'>{index.text}</Typography>
                 </Box>
             ))}
-            <Box>
+            <Box className="!flex !justify-around">
                 <PrimaryButton title="Go To Detail" className="!mx-5 !mt-10"/>
             </Box>
         </Box>

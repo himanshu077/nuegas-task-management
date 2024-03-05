@@ -14,7 +14,7 @@ const MonthlyMentors = () => {
             <Box className="!flex flex-col lg:flex-row lg:!gap-4">
                 <ReviewCards src={Photo} alt="photo" name="Curious George" tag='UI UX Design' title="+ Follow" count="40" reviews="4,7 (750 Reviews)" />
                 <ReviewCards src={Photo2} alt="photo" name="Abraham Lincoln" tag='3D Design' title="Followed" count="32" reviews="4,9 (510 Reviews)" className="!hidden lg:!inline" />
-                <ReviewCards src={Photo2} alt="photo" name="Abraham Lincoln" tag='3D Design' title="Followed" count="32" reviews="4,9 (510 Reviews)" className="!hidden lg:!inline" />
+                {/* <ReviewCards src={Photo2} alt="photo" name="Abraham Lincoln" tag='3D Design' title="Followed" count="32" reviews="4,9 (510 Reviews)" className="!hidden lg:!inline" /> */}
             </Box>
         </Box>
     )

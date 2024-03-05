@@ -18,7 +18,7 @@ import HelpCenter from '../HelpCenter';
 
 const Sidebar = () => {
     return (
-        <Box className="h-screen bg-fdfafaf w-[16vw] !border-r !border-[--Activity-body] p-8 fixed top-0 left-0 overflow-auto">
+        <Box className="h-screen !bg-white w-[16vw] p-8 fixed top-0 left-0 overflow-auto">
             <Box>
                 <Image src={NuegasLogo} alt="NuegasLogo" />
             </Box>

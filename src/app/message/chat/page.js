@@ -15,10 +15,10 @@ const ChatArea = () => {
         <div className=''>
             <Box className="flex p-4 bg-white justify-between">
                 <Box className="flex">
-                    <a >
-                    <Box className="lg:!hidden !inline">
-                    <Image src={ArrowLeft} alt='arrow-left' className='!mx-4 !my-4'/>
-                    </Box>
+                    <a href='/message'>
+                        <Box className="lg:!hidden !inline">
+                            <Image src={ArrowLeft} alt='arrow-left' className='!mx-4 !my-4' />
+                        </Box>
                     </a>
                     <Image src={Angelie} alt='image' />
                     <Box className="px-4">
@@ -30,11 +30,11 @@ const ChatArea = () => {
                     </Box>
                 </Box>
                 <Box className="!flex !gap-6 lg:!mx-8 !mx-2 !my-4">
-                    <Box className="!w-5 !h-5 !rounded-full !border !border-[--Activity-body]">
-                        <Image src={VideoSvg} alt='video' className=''/>
+                    <Box className="!rounded-full !p-1 !border !border-[--Activity-body]">
+                        <Image src={VideoSvg} alt='video' className='!w-5 !h-5' />
                     </Box>
-                    <Box className="!w-5 !h-5 !rounded-full !border !border-[--Activity-body]">
-                        <Image src={CallSvg} alt='call' />
+                    <Box className="!rounded-full !p-1 !border !border-[--Activity-body]">
+                        <Image src={CallSvg} alt='call' className='!w-5 !h-5'/>
                     </Box>
                 </Box>
             </Box>
@@ -51,7 +51,7 @@ const ChatArea = () => {
                     <Typography className='!px-8 !pt-2 !text-[--sidebar-text] PlusJakartaSans400 !text-xs'>Today 11:52</Typography>
                 </Box>
                 <Box className="!mx-8">
-                    <Typography className='!break-words lg:!w-[18vw] !p-3 !rounded-b-xl !rounded-r-xl PlusJakartaSans500 !text-sm !text-[--Secondary-500] !bg-white'>Yes sure, Any problem with your assignment?</Typography>
+                    <Typography className='!break-words lg:!w-[20vw] !p-3 !rounded-b-xl !rounded-r-xl PlusJakartaSans500 !text-sm !text-[--Secondary-500] !bg-white'>Yes sure, Any problem with your assignment?</Typography>
                     <Typography className='!px-2 !pt-2 !text-[--sidebar-text] PlusJakartaSans400 !text-xs'>Today 11:53</Typography>
                 </Box>
                 <Box className="!flex !flex-row-reverse ">
@@ -67,26 +67,27 @@ const ChatArea = () => {
                     <Typography className='!px-8 !pt-2 !text-[--sidebar-text] PlusJakartaSans400 !text-xs'>Today 11:52</Typography>
                 </Box>
                 <Box className="!mx-8">
-                    <Typography className='!break-words lg:!w-[18vw] !p-3 !rounded-b-xl !rounded-r-xl PlusJakartaSans500 !text-sm !text-[--Secondary-500] !my-4 !bg-white'>No plugins. You just have to make it smaller according to the size of the phone.</Typography>
-                    <Typography className='!break-words lg:!w-[18vw] !p-3 !rounded-b-xl !rounded-r-xl PlusJakartaSans500 !text-sm !text-[--Secondary-500] !bg-white'>Thank you very much. I'm glad you asked about the assignment</Typography>
+                    <Typography className='!break-words lg:!w-[20vw] !p-3 !rounded-b-xl !rounded-r-xl PlusJakartaSans500 !text-sm !text-[--Secondary-500] !my-4 !bg-white'>No plugins. You just have to make it smaller according to the size of the phone.</Typography>
+                    <Typography className='!break-words lg:!w-[20vw] !p-3 !rounded-b-xl !rounded-r-xl PlusJakartaSans500 !text-sm !text-[--Secondary-500] !bg-white'>Thank you very much. I'm glad you asked about the assignment</Typography>
                     <Typography className='!px-2 !pt-2 !text-[--sidebar-text] PlusJakartaSans400 !text-xs !mb-8'>Today 11:53</Typography>
                 </Box>
             </Box>
             <Box className="!fixed !bottom-0">
-    <Box className="flex !w-[74vw] !flex-col xl:!mt-0 !mt-9 !bg-white">
-        <InputBase
-            endAdornment={
-                <InputAdornment position="end">
-                    <Image src={LinkSvg} alt='link' className='fill-black' />
-                    <Image src={SendSvg} alt='send' className='!bg-[--Primary-500]' />
-                </InputAdornment>
-            }
-            placeholder="Send your message…"
-            className="!border !border-[--Activity-body] PlusJakartaSans500 !text-sm !px-6 !w-full py-[1.77vh] !rounded-xl"
-        />
-    </Box>
-</Box>
-
+                <Box className="flex lg:!w-[61vw] !w-[100vw] !flex-col xl:!mt-0 !mt-9 !bg-white">
+                    <InputBase
+                        endAdornment={
+                            <InputAdornment position="end">
+                                <Image src={LinkSvg} alt='link' className='fill-black !mx-6 !cursor-pointer' />
+                                <Box className="!bg-[--Primary-500] !px-2 !py-1 !rounded-lg  !cursor-pointer ">
+                                    <Image src={SendSvg} alt='send' className='!w-8 !h-8' />
+                                </Box>
+                            </InputAdornment>
+                        }
+                        placeholder="Send your message…"
+                        className="!border !border-[--Activity-body] PlusJakartaSans500 !text-sm !px-6 !w-full py-[1.77vh] !rounded-xl"
+                    />
+                </Box>
+            </Box>
         </div >
     )
 }
