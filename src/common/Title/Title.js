@@ -8,7 +8,7 @@ const Title = ({ title }) => {
     return (
         <Box className="!flex !justify-between">
             <Typography className='PlusJakartaSans600 !text-[--Secondary-500] lg:!text-2xl !text-xl'>{title}</Typography>
-            <Box className="!flex !mx-6">
+            <Box className="!flex lg:!mx-6 md:!mx-6 ">
                 <Image src={ArrowLeft} alt='left'/>
                 <Image src={ArrowRight} alt='right'/>
             </Box>

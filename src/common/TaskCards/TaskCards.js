@@ -28,7 +28,7 @@ const TaskCards = ({ src, alt, title, subTitle, progressPercentage, leftDays, cl
                     <Typography variant='h6' className='!pt-2 PlusJakartaSans500 !text-sm !text-[--Secondary-500]'>{leftDays}</Typography>
                 </Box>
                 <Box>
-                    <Avatars avatars={avatars}/>
+                    <Avatars avatars={avatars} />
                 </Box>
             </Box>
         </Box>
