@@ -42,7 +42,7 @@ const Sidebar = () => {
                                         />
                                     </ListItemIcon>
                                     <ListItemText
-                                        className={`font-bold text-[--sidebar-text] !pl-6 hover:text-black ${pathname === item.path ? 'text-black' : ''
+                                        className={`font-bold text-[--sidebar-text]  hover:text-black ${pathname === item.path ? 'text-black' : ''
                                             }`}
                                         primary={item.primary}
                                     />
