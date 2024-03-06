@@ -44,7 +44,7 @@ const Page = () => {
                 <Image src={Profile} alt="Profile" />
               </Box>
             </Box>
-            <Box className="!flex lg:!flex-row lg:!gap-0 !gap-6 lg:!justify-between md:!justify-around !mx-[1.1vw] !flex-col !mt-12">
+            <Box className="!flex lg:!flex-row lg:!gap-0 !gap-6 lg:!justify-between md:!flex-row !mx-[1.1vw] !flex-col !mt-12">
               <RunningTrackUi />
               <Activity />
             </Box>
