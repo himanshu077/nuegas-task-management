@@ -2,7 +2,7 @@ import React from 'react';
 import { Avatar } from '@mui/material';
 import AvatarGroup from '@mui/material/AvatarGroup';
 
-const Avatars = ({ avatars}) => {
+const Avatars = ({ avatars }) => {
 
     return (
         <AvatarGroup max={5}>

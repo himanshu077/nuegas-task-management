@@ -5,7 +5,7 @@ const ApexCharts = dynamic(() => import("react-apexcharts"), { ssr: false });
 const SplineAreaChart = () => {
   const series = [{
     name: 'Series 1',
-    data: [1, 2, 1, 3, 2, 1, 2] // Converted to numbers
+    data: [1, 2, 1, 3, 2, 1, 2]
   }];
 
   const daysOfWeek = ['S', 'M', 'T', 'W', 'T', 'F', 'S'];

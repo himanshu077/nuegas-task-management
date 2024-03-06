@@ -49,13 +49,13 @@ const Mentors = () => {
                         <Box className="!my-6 !mx-3">
                             <Title title="Recent Mentors" />
                         </Box>
-                        <Box className="!flex flex-col lg:flex-row">
+                        <Box className="!flex flex-col lg:flex-row !gap-4 lg:!gap-0">
                             {data.map((reviewData) => (
                                 <ReviewCards
                                     key={reviewData.id}
                                     src={reviewData.src}
                                     alt={reviewData.alt}
-                                    className={reviewData?.className}
+                                    className={`${reviewData?.className} lg:!w-[17.7vw]`}
                                     tag={reviewData.tag}
                                     name={reviewData.name}
                                     title={reviewData.title}
@@ -67,7 +67,7 @@ const Mentors = () => {
                         <Box className="!my-6 !mx-3">
                             <Typography className='PlusJakartaSans600 !text-[--Secondary-500] lg:!text-2xl !text-xl'>Mentors</Typography>
                         </Box>
-                        <Box className="!grid lg:!grid-cols-4 !grid-rows-1 !pb-6">
+                        <Box className="!grid lg:!grid-cols-4 !grid-rows-1 !gap-4 lg:!gap-0 !pb-6">
                             {MentorsData.map((data) => (
                                 <ReviewCards
                                     key={data.id}
@@ -79,6 +79,7 @@ const Mentors = () => {
                                     tag={data.tag}
                                     reviews={data.reviews}
                                     description={data.description}
+                                    className="!py-5 lg:!w-[19.2vw]"
                                 />
                             ))}
                         </Box>

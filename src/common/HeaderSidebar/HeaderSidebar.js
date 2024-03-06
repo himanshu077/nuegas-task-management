@@ -24,7 +24,7 @@ const HeaderSidebar = () => {
     { id: 2, title: "Task", src: Tasks, alt: "task", path: "/task" },
     { id: 3, title: "Mentors", src: Mentors, alt: "mentors", path: "/mentors" },
     { id: 4, title: "Message", src: Message, alt: "message", path: "/message" },
-    { id: 5, title: "Settings", src: Settings, alt: "setting", path: "/settings" },
+    { id: 5, title: "Settings", src: Settings, alt: "setting", path: "/settings/general" },
   ];
 
   const [open, setOpen] = useState(false);
@@ -36,8 +36,8 @@ const HeaderSidebar = () => {
   return (
     <div>
       <Box className="!flex !justify-between !items-center !py-3 !px-4">
-        <Button onClick={toggleDrawer(!open)}>
-          <MenuIcon className="!text-[--Secondary-500] !text-3xl" />
+        <Button onClick={toggleDrawer(!open)} className="">
+          <MenuIcon className="!text-[--Secondary-500] !text-5xl  !border !border-[--Activity-body] !p-2 !rounded-full" />
         </Button>
       </Box>
       <Drawer anchor="left" open={open} onClose={toggleDrawer(false)}>
