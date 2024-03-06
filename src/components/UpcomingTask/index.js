@@ -27,7 +27,7 @@ const UpcomingTask = () => {
                         subTitle={data.subTitle}
                         progressPercentage={data.progressPercentage}
                         leftDays={data.leftDays}
-                        className={data?.className}
+                        className={`${data?.className} lg:!w-[20.6vw]`}
                     />
                 ))}
             </Box>
