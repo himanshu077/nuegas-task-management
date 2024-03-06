@@ -1,56 +1,68 @@
 "use client";
 import React from "react";
 import Box from "@mui/material/Box";
+import Grid from "@mui/material/Grid";
+import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
-import Drawer from "@mui/material/Drawer";
-import Button from "@mui/material/Button";
-import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
-import ListItemButton from "@mui/material/ListItemButton";
-import ListItemIcon from "@mui/material/ListItemIcon";
-import ListItemText from "@mui/material/ListItemText";
-import InboxIcon from "@mui/icons-material/MoveToInbox";
-import MailIcon from "@mui/icons-material/Mail";
+import Profile from "@/assets/svg/Profile.svg";
+import Notification from "@/assets/svg/Notification.svg";
+import Image from "next/image";
+import { useMediaQuery } from '@mui/material';
+import Calendar from "@/common/Calendar/Calendar";
+import RunningTrackUi from "@/common/RunningUI/RunningTrackUi";
+import Activity from "@/components/Activity";
+import Sidebar from "@/components/Sidebar";
+import Todaystask from "@/components/Todaystask";
+import MonthlyMentors from "@/components/MonthelyMentors";
+import HeaderSidebar from "@/common/HeaderSidebar/HeaderSidebar";
+import UpcomingTask from "@/components/UpcomingTask";
 
-const page = () => {
-  const [open, setOpen] = React.useState(true);
-
-  const toggleDrawer = (newOpen) => () => {
-    setOpen(newOpen);
-  };
-
-  const DrawerList = (
-    <Box sx={{ width: 250 }} role="presentation" onClick={toggleDrawer(false)}>
-      <List>
-        {["Overview", "Task", "Mentors", "Message", "Settings"].map(
-          (text, index) => (
-            <ListItem key={text} disablePadding>
-              <ListItemButton>
-                <ListItemIcon>
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                </ListItemIcon>
-                <ListItemText primary={text} />
-              </ListItemButton>
-            </ListItem>
-          )
-        )}
-      </List>
-    </Box>
-  );
+const Page = () => {
+  const isLargeScreen = useMediaQuery('(min-width:1084px)');
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <Box>
-        <Typography className="PlusJakartaSans700">Main App</Typography>
-      </Box>
-      <div>
-        <Button onClick={toggleDrawer(true)}>Main App</Button>
-        <Drawer open={open} onClose={toggleDrawer(false)}>
-          {DrawerList}
-        </Drawer>
-      </div>
+    <main className="min-h-screen">
+      <Grid container spacing={2}>
+        <Grid item xs={isLargeScreen ? 2 : false}>
+          {isLargeScreen ? <Sidebar /> : <HeaderSidebar />}
+        </Grid>
+        <Grid item xs={isLargeScreen ? 7 : 12} overflowX="auto">
+          <Box className=" lg:!p-8 !p-4 !bg-[--body-light] ">
+            <Box className="!flex !items-center !justify-between md:!hidden">
+              <Box className="lg:!grid !gap-3 md:hidden">
+                <Typography variant="h1" className="PlusJakartaSans700 !text-2xl !leading-9">
+                  Hi, Skylar Dias
+                </Typography>
+                <Typography variant="h6" className="!text-[--secondry-text] PlusJakartaSans500 !text-base !leading-6">
+                  Let's finish your tasks today!
+                </Typography>
+              </Box>
+              <Box className="lg:!flex !items-center !gap-6 !hidden ">
+                <IconButton>
+                  <Image src={Notification} alt="Notification" />
+                </IconButton>
+
+                <Image src={Profile} alt="Profile" />
+              </Box>
+            </Box>
+            <Box className="!flex lg:!flex-row lg:!gap-0 !gap-6 !justify-between !mx-[1.1vw] !flex-col !mt-12">
+              <RunningTrackUi />
+              <Activity />
+            </Box>
+            <MonthlyMentors />
+            <UpcomingTask />
+          </Box>
+        </Grid>
+        <Grid item xs={isLargeScreen ? 3 : 12}>
+          <Box className="lg:!p-4 !p-4 !bg-[--body]">
+            <Calendar />
+            <Todaystask />
+          </Box>
+        </Grid>
+
+      </Grid>
     </main>
   );
 };
 
-export default page;
+export default Page;
