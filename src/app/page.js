@@ -22,14 +22,14 @@ const Page = () => {
 
   return (
     <main className="min-h-screen">
-      <Grid container spacing={2}>
+      <Grid container>
         <Grid item xs={isLargeScreen ? 2 : false}>
           {isLargeScreen ? <Sidebar /> : <HeaderSidebar />}
         </Grid>
-        <Grid item xs={isLargeScreen ? 7 : 12} overflowX="auto">
-          <Box className=" lg:!p-8 !p-4 !bg-[--body-light] ">
-            <Box className="!flex !items-center !justify-between md:!hidden">
-              <Box className="lg:!grid !gap-3 md:hidden">
+        <Grid item xs={isLargeScreen ? 7 : 12} className="p-0">
+          <Box className=" lg:!p-8 !p-4 ">
+            <Box className="lg:!flex !items-center !justify-between !hidden">
+              <Box className="lg:!grid !gap-3 md:!hidden ">
                 <Typography variant="h1" className="PlusJakartaSans700 !text-2xl !leading-9">
                   Hi, Skylar Dias
                 </Typography>
@@ -41,11 +41,10 @@ const Page = () => {
                 <IconButton>
                   <Image src={Notification} alt="Notification" />
                 </IconButton>
-
                 <Image src={Profile} alt="Profile" />
               </Box>
             </Box>
-            <Box className="!flex lg:!flex-row lg:!gap-0 !gap-6 !justify-between !mx-[1.1vw] !flex-col !mt-12">
+            <Box className="!flex lg:!flex-row lg:!gap-0 !gap-6 lg:!justify-between md:!flex-row !mx-[1.1vw] !flex-col !mt-12">
               <RunningTrackUi />
               <Activity />
             </Box>
@@ -54,12 +53,11 @@ const Page = () => {
           </Box>
         </Grid>
         <Grid item xs={isLargeScreen ? 3 : 12}>
-          <Box className="lg:!p-4 !p-4 !bg-[--body]">
+          <Box className="lg:!p-10 !p-4 !bg-[--Activity-body] !h-full">
             <Calendar />
             <Todaystask />
           </Box>
         </Grid>
-
       </Grid>
     </main>
   );
