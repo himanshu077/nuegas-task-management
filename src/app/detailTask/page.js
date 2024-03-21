@@ -30,7 +30,7 @@ const DetailTasks = () => {
                     <Header title="Detail Task" />
                     <Grid container spacing={0}>
                         <Grid item xxs={12} lg={7}>
-                            <Box className="!m-4 !bg-white lg:!pl-12 !pl-4">
+                            <Box className="!m-4 !bg-white lg:!pl-12 !pl-4 !rounded-lg">
                                 <Box className="!flex !justify-center !pt-3">
                                     <Image src={VideoTask} alt="image" />
                                 </Box>
@@ -51,7 +51,7 @@ const DetailTasks = () => {
                                 </Box>
                                 <Typography variant="h3" className="PlusJakartaSans600 !text-2xl !text-[--Secondary-500]">Description</Typography>
                                 <Typography className="!break-words PlusJakartaSans500 !text-sm !text-[--Secondary-500] !py-4">Follow the video tutorial above. Understand how to use each tool in the Figma application. Also learn how to make a good and correct design. Starting from spacing, typography, content, and many other design hierarchies. Then try to make it yourself with your imagination and inspiration.</Typography>
-                                <Typography  className="PlusJakartaSans600 !text-2xl !text-[--Secondary-500]">Essence of Assessment</Typography>
+                                <Typography className="PlusJakartaSans600 !text-2xl !text-[--Secondary-500]">Essence of Assessment</Typography>
                                 <Box className="!flex !gap-2 !py-3">
                                     <Image src={TickCircle} alt="tick" />
                                     <Typography className="PlusJakartaSans500 !text-base !text-[--Secondary-500]">Understanding the tools in Figma</Typography>
@@ -71,34 +71,36 @@ const DetailTasks = () => {
                             </Box>
                         </Grid>
                         <Grid item xs={12} lg={5}>
-                            <Box className="!bg-white !px-6 !my-4">
+                            <Box className="!bg-white !px-6 !my-4 !py-4 !rounded-lg">
                                 <Typography className="PlusJakartaSans600 !text-base !text-[--Secondary-500]">Assigned Assignments</Typography>
                                 <Typography variant="h4" className="PlusJakartaSans600 !text-2xl !text-[--Secondary-500]">Creating Awesome Mobile Apps</Typography>
-                                <Typography>UI UX Design . Apps Design</Typography>
-                                <Typography>Detail Student</Typography>
-                                <Box className="!flex !justify-between">
-                                    <Typography>Student's name</Typography>
-                                    <Typography>Skylar Dias</Typography>
+                                <Typography className="PlusJakartaSans500 !text-sm !text-[--Secondary-400] !py-4">UI UX Design . Apps Design</Typography>
+                                <Typography className="PlusJakartaSans600 !text-xl !text-[--Secondary-500]">Detail Student</Typography>
+                                <Box className="!flex !justify-between !pt-3">
+                                    <Typography className="PlusJakartaSans500 !text-sm !text-[--Secondary-400]">Student's name</Typography>
+                                    <Typography className="PlusJakartaSans500 !text-sm !text-[--Secondary-500]">Skylar Dias</Typography>
+                                </Box>
+                                <Box className="!flex !justify-between !py-2">
+                                    <Typography className="PlusJakartaSans500 !text-sm !text-[--Secondary-400]">Student Class</Typography>
+                                    <Typography className="PlusJakartaSans500 !text-sm !text-[--Secondary-500]">MIPA 2</Typography>
                                 </Box>
                                 <Box className="!flex !justify-between">
-                                    <Typography>Student Class</Typography>
-                                    <Typography>MIPA 2</Typography>
+                                    <Typography className="PlusJakartaSans500 !text-sm !text-[--Secondary-400]">Student Number</Typography>
+                                    <Typography className="PlusJakartaSans500 !text-sm !text-[--Secondary-500]">10</Typography>
                                 </Box>
+                                <Typography className="PlusJakartaSans600 !text-xl !text-[--Secondary-500] !py-3 ">File Task</Typography>
                                 <Box className="!flex !justify-between">
-                                    <Typography>Student Number</Typography>
-                                    <Typography>10</Typography>
+                                    <Typography className="PlusJakartaSans500 !text-sm !text-[--Secondary-400]" >Last Modified</Typography>
+                                    <Typography className="PlusJakartaSans500 !text-sm !text-[--Secondary-500]">1 July 2022</Typography>
                                 </Box>
-                                <Typography>File Task</Typography>
-                                <Box>
-                                    <Typography>Last Modified</Typography>
-                                    <Typography>1 July 2022</Typography>
-                                </Box>
-                                <Typography>File submissions</Typography>
-                                <Box className="!border-2 !border-dashed !border-[--Primary-500] !rounded-xl !mx-6 !w-[30vw] !flex !justify-center !h-[20vh]">
+                                <Typography className="PlusJakartaSans500 !text-sm !text-[--Secondary-400] !py-2"  >File submissions</Typography>
+                                <Box className="!border-2 !border-dashed !border-[--Primary-500] !rounded-xl lg:!mx-6 !mx-2 lg:!w-[30vw] !w-full !flex !justify-center !h-[20vh]">
                                     <Image src={FolderOpen} alt="image" />
                                 </Box>
-                                <Typography className="PlusJakartaSans500 !text-sm !text-[--Secondary-500] !px-8">*drag or browser from device</Typography>
-                                <PrimaryButton title="Submit" />
+                                <Typography className="PlusJakartaSans500 !text-sm !text-[--Secondary-400] !px-8 !pt-2">*drag or browser from device</Typography>
+                                <Box className="!flex !items-center !justify-center !py-4">
+                                    <PrimaryButton title="Submit" className="!mt-6" />
+                                </Box>
                             </Box>
 
                         </Grid>

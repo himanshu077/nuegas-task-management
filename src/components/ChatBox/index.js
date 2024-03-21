@@ -9,7 +9,7 @@ const ChatBox = () => {
             {chatBoxData.map((data) => (
                 <a href='/message/chat' key={data.id}>
                 <Box key={data.id} className="flex py-3 px-4 border-y border-[--Activity-body]">
-                    <Image src={data.src} alt="image" />
+                    <Image src={data.src} alt="image" className='!w-12 !h-12'/>
                     <Box className="px-3 flex flex-grow justify-between">
                         <Box className="flex flex-col">
                             <Typography className="font-semibold PlusJakartaSans500 text-sm text-secondary-500">

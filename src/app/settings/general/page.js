@@ -19,13 +19,13 @@ const Settings = () => {
 
     return (
         <main className="min-h-screen">
-            <Grid container spacing={0}>
+            <Grid container>
                 <Grid item xs={isLargeScreen ? 2 : false}>
                     {isLargeScreen ? <Sidebar /> : <HeaderSidebar />}
                 </Grid>
                 <Grid item xs={isLargeScreen ? 10 : 12}>
-                    <Box className="!bg-white !border-b !border-[--Activity-body]">
-                        <Box className="!flex !items-center !justify-between !p-6">
+                    <Box className="!bg-white lg:!border-b !border-[--Activity-body]">
+                        <Box className="!flex !items-center !justify-between !p-8">
                             <Typography className='PlusJakartaSans600 !text-[--Secondary-500] !text-2xl !px-2'>Settings</Typography>
                             <Box className="lg:!flex !items-center !gap-6 !hidden ">
                                 <IconButton>
@@ -35,8 +35,10 @@ const Settings = () => {
                             </Box>
                         </Box>
                     </Box>
-                    <Box className="lg:!m-8 !m-3 !bg-white !px-8 !py-4 !rounded-xl">
+                    <Box className="lg:!mt-8 lg:!mx-5 lg:!rounded-t-xl !bg-white !px-8 !py-4">
                         <SettingTabs />
+                    </Box>
+                    <Box className="lg:!mb-8  lg:!m-0 lg:!mx-5 !m-4 !bg-white !px-8 !py-4 !rounded-xl">
                         <Typography className='PlusJakartaSans600 !text-[--Secondary-500] !text-sm !px-2 !py-5'>Language</Typography>
                         <CommonSelect />
                         <Typography className='PlusJakartaSans600 !text-[--Secondary-500] !text-sm !px-2 !py-5'>Timezone</Typography>
@@ -46,7 +48,7 @@ const Settings = () => {
                             <button className="!border !border-[--Primary-500] !py-3 !rounded-lg PlusJakartaSans500 !flex !text-[--Secondary-500] text-xs !px-4">24 Hours<Image src={Circle24} alt="24" className="!ml-[4.1vw]" /></button>
                             <button className="!border !border-[--Activity-body] !rounded-lg !py-3 PlusJakartaSans500 !flex !text-[--Secondary-500] text-xs !px-4 ">12 Hours<Image src={Circle12} alt="12" className="!ml-[4.1vw]" /></button>
                         </Box>
-                        <PrimaryButton title="Save Changes" />
+                        <PrimaryButton title="Save Changes" className="lg:!mt-8 lg:!mb-5 !mt-40" />
                     </Box>
                 </Grid>
             </Grid>
