@@ -20,7 +20,7 @@ const ChatArea = () => {
                             <Image src={ArrowLeft} alt='arrow-left' className='!mx-4 !my-4' />
                         </Box>
                     </a>
-                    <Image src={Angelie} alt='image' />
+                    <Image src={Angelie} alt='image' className='!w-[52px] !h-[52px]' />
                     <Box className="px-4">
                         <Typography className='PlusJakartaSans600 !text-sm !text-[--Secondary-500]'>Angelie Crison</Typography>
                         <Box className="flex !gap-2 !py-1 items-center">
@@ -77,14 +77,14 @@ const ChatArea = () => {
                     <InputBase
                         endAdornment={
                             <InputAdornment position="end">
-                                <Image src={LinkSvg} alt='link' className='fill-black !mx-6 !cursor-pointer' />
-                                <Box className="!bg-[--Primary-500] !px-2 !py-1 !rounded-lg  !cursor-pointer ">
-                                    <Image src={SendSvg} alt='send' className='!w-8 !h-8' />
+                                <Image src={LinkSvg} alt='link' className='fill-black lg:!mx-6 !mx-2 !cursor-pointer' />
+                                <Box className="!bg-[--Primary-500] !px-2 !py-2 !rounded-lg  !cursor-pointer ">
+                                    <Image src={SendSvg} alt='send' className='!max-w-2xl' />
                                 </Box>
                             </InputAdornment>
                         }
                         placeholder="Send your message…"
-                        className="!border !border-[--Activity-body] PlusJakartaSans500 !text-sm !px-6 !w-full py-[1.77vh] !rounded-xl"
+                        className="!border !border-[--Activity-body] PlusJakartaSans500 !text-sm !px-6 !w-full py-[1.77vh] !rounded-lg"
                     />
                 </Box>
             </Box>
