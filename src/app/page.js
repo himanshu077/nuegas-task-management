@@ -44,7 +44,7 @@ const Page = () => {
                 <Image src={Profile} alt="Profile" />
               </Box>
             </Box>
-            <Box className="!flex lg:!flex-row lg:!gap-0 !gap-6 lg:!justify-between md:!flex-row !mx-[1.1vw] !flex-col !mt-12">
+            <Box className="!flex xl:!flex-row !gap-6 lg:!justify-between md:!flex-row !flex-col !mx-2 !mt-12">
               <RunningTrackUi />
               <Activity />
             </Box>
@@ -53,7 +53,7 @@ const Page = () => {
           </Box>
         </Grid>
         <Grid item xs={isLargeScreen ? 3 : 12}>
-          <Box className="lg:!p-10 !p-4 !bg-[--Activity-body] !h-full">
+          <Box className="lg:!p-8 !p-4 !bg-[--Activity-body] !h-full">
             <Calendar />
             <Todaystask />
           </Box>

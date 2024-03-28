@@ -49,7 +49,7 @@ const Notifications = () => {
                                     <ToggleButton key={index.id} label={index.label} isActive={index.isActive} />
                                 </Box>
                             ))}
-                            <PrimaryButton title="Save Changes" className="lg:!mt-8 lg:!mb-5 !mt-40" />
+                            <PrimaryButton title="Save Changes" className="lg:!mt-8 lg:!mb-5 xl:!w-[17vw] md:!w-[23vw] !w-full !mt-40" />
                         </Box>
                     </Box>
                 </Grid>

@@ -18,7 +18,8 @@ const Todaystask = () => {
                 alt="taskimage"
                 title="Creating Awesome Mobile Apps"
                 subTitle="UI /UX Designer"
-                progressPercentage="90%"
+                progressPercentage="90"
+                defaultValue="90"
                 leftDays="1 Hour"
             />
             <DetailTask/>

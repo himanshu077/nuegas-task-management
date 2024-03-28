@@ -48,7 +48,7 @@ const Settings = () => {
                             <button className="!border !border-[--Primary-500] !py-3 !rounded-lg PlusJakartaSans500 !flex !text-[--Secondary-500] text-xs !px-4">24 Hours<Image src={Circle24} alt="24" className="!ml-[4.1vw]" /></button>
                             <button className="!border !border-[--Activity-body] !rounded-lg !py-3 PlusJakartaSans500 !flex !text-[--Secondary-500] text-xs !px-4 ">12 Hours<Image src={Circle12} alt="12" className="!ml-[4.1vw]" /></button>
                         </Box>
-                        <PrimaryButton title="Save Changes" className="lg:!mt-8 lg:!mb-5 !mt-40" />
+                        <PrimaryButton title="Save Changes" className="lg:!mt-8 lg:!mb-5 xl:!w-[17vw] md:!w-[23vw] !w-full !mt-40" />
                     </Box>
                 </Grid>
             </Grid>

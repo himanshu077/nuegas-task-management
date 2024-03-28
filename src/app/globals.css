@@ -30,6 +30,12 @@ body {
   background: var(--body);
 }
 
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
 .react-calendar button span div abbr {
   font-family: var(--PlusJakarta-semibold) !important;
 }

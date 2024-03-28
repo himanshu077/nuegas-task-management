@@ -9,7 +9,7 @@ const ReviewCards = ({ src, alt, name, tag, title, count, reviews, description, 
     const titleColor = title === "Followed" ? "!text-[--Secondary-400]" : "!text-[--Primary-500]"
 
     return (
-        <Box className={classNames("!bg-white", "!rounded-xl", "lg:!m-4", "md:!m-3", "!px-5", "!py-3", className)}>
+        <Box className={classNames("!bg-white","!w-full", "!rounded-xl", "lg:!m-4", "md:!m-3", "!px-5", "!py-3", className)}>
             <Box className="!flex !justify-between !gap-2">
                 <Box className="!flex">
                     <Image src={src} alt={alt} className='!w-12 !h-12' />

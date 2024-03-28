@@ -17,11 +17,11 @@ const DetailTask = () => {
             {data.map((index) => (
                 <Box key={index.id} className="!flex !px-6 !gap-2">
                     <Typography variant='h6' className='!bg-[--Activity-body] !px-4 !py-2 PlusJakartaSans500 !text-sm !font-medium !text-[--Secondary-500] lg:!mb-2 !mb-4 !rounded-xl'>{index.id}</Typography>
-                    <Typography variant='h6' className=' PlusJakartaSans500 !text-sm !font-medium !text-[--Secondary-500] lg:!pt-2 md:pt-2'>{index.text}</Typography>
+                    <Typography variant='h6' className=' PlusJakartaSans500 !text-sm !font-medium !text-[--Secondary-500] lg:!pt-2 md:pt-2 !line-clamp-1'>{index.text}</Typography>
                 </Box>
             ))}
             <Box className="!flex !justify-around">
-                <PrimaryButton title="Go To Detail" className="!mx-5 !mt-10"/>
+                <PrimaryButton title="Go To Detail" className="!mx-5 !w-full !mt-10"/>
             </Box>
         </Box>
     )

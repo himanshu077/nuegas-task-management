@@ -55,7 +55,7 @@ const Mentors = () => {
                                     key={reviewData.id}
                                     src={reviewData.src}
                                     alt={reviewData.alt}
-                                    className={`${reviewData?.className} lg:!w-[17.7vw]`}
+                                    className={`${reviewData?.className} !w-full`}
                                     tag={reviewData.tag}
                                     name={reviewData.name}
                                     title={reviewData.title}

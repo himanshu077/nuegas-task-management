@@ -56,7 +56,7 @@ const ChatArea = () => {
                 </Box>
                 <Box className="!flex !flex-row-reverse ">
                     <Box className=" !bg-[--Primary-500] !mx-8 lg:!w-[21.8vw] !rounded-s-xl !rounded-b-xl !flex !justify-center !items-center !flex-col !p-2">
-                        <Image src={Image2} alt='image' className='lg:!w-[21vw]' />
+                        <Image src={Image2} alt='image' className='!w-full' />
                         <Typography className='!break-words  PlusJakartaSans500 !py-2 !text-sm !text-white '>How to make a responsive display from the dashboard?</Typography>
                     </Box>
                 </Box>

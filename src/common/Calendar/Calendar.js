@@ -7,8 +7,8 @@ const CalendarComponent = () => {
   const [value, onChange] = useState(new Date());
 
   return (
-    <div className="react-calendar !w-full PlusJakartaSans600 !rounded-xl">
-      <Calendar onChange={onChange} value={value} className="!w-full !rounded-xl"  />
+    <div className="react-calendar !border-none !w-full PlusJakartaSans600 !rounded-xl">
+      <Calendar onChange={onChange} value={value} className="!w-full !rounded-xl !border-none"  />
     </div>
   );
 };

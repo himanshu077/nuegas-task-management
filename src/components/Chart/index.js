@@ -33,8 +33,8 @@ const SplineAreaChart = () => {
   };
 
   return (
-    <div className='!bg-white !w-full !h-full'>
-      <ApexCharts options={options} series={series} type="line" height={131} className="md:!w-[45vw]  !w-full lg:!w-[29vw]" />
+    <div className='!bg-white !h-full'>
+      <ApexCharts options={options} series={series} type="line" height={131} className="!w-full" />
     </div>
   );
 };

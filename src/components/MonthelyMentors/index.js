@@ -9,15 +9,15 @@ const MonthlyMentors = () => {
 
     const MonthlyData = [
         { id: 0, src: Photo, alt: "Image", name: "Curious George", tag: 'UI UX Design', title: "+ Follow", count: "40", reviews: "4,7 (750 Reviews)" },
-        { id: 1, src: Photo2, alt: "Image", name: "Abraham Lincoln", tag: '3D Design', title: "Followed", count: "32", reviews: "4,9 (510 Reviews)", className: "!hidden lg:!inline" },
+        { id: 1, src: Photo2, alt: "Image", name: "Abraham Lincoln", tag: '3D Design', title: "Followed", count: "32", reviews: "4,9 (510 Reviews)", className: "!hidden lg:!inline md:!inline" },
     ]
 
     return (
-        <Box className="!py-10">
+        <Box className="!py-10 lg:!mx-0 !mx-3">
             <Box className="!mb-6 !ml-3">
                 <Title title="Monthly Mentors" />
             </Box>
-            <Box className="!flex flex-col lg:flex-row lg:!gap-4">
+            <Box className="!flex flex-col lg:flex-row md:!flex-row lg:!gap-4">
                 {MonthlyData.map((data) => (
                     <ReviewCards
                         key={data.id}
@@ -29,7 +29,7 @@ const MonthlyMentors = () => {
                         tag={data.tag}
                         reviews={data.reviews}
                         description={data.description}
-                        className={`${data?.className} lg:!w-[17.7vw]`}
+                        className={`${data?.className} !w-full`}
                     />
                 ))}
             </Box>

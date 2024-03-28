@@ -16,7 +16,7 @@ const Message = () => {
     const isLargeScreen = useMediaQuery('(min-width:1084px)');
 
     return (
-        <main className="min-h-screen">
+        <main className="max-h-screen">
             <Grid container spacing={0}>
                 <Grid item xs={isLargeScreen ? 2 : false}>
                     {isLargeScreen ? <Sidebar /> : <HeaderSidebar />}

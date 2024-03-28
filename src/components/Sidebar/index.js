@@ -52,7 +52,7 @@ const Sidebar = () => {
                     ))}
                 </List>
             </Box>
-            <Box className="absolute bottom-4">
+            <Box className="absolute !hidden xl:!inline bottom-4">
                 <HelpCenter />
             </Box>
         </Box>

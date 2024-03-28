@@ -6,8 +6,8 @@ import Charts from '../Chart';
 
 const Activity = () => {
     return (
-        <Box className="!bg-[--Activity-body] !rounded-xl lg:mt-0 !p-5">
-            <Box className="!flex !justify-between mb-1">
+        <Box className="!bg-[--Activity-body] !rounded-xl lg:mt-0 !w-full !p-5">
+            <Box className="!flex !justify-between mb-4">
                 <Typography className='PlusJakartaSans600 !text-[--Secondary-500] !text-base !px-2'>Activity</Typography>
                 <Box className="!flex !gap-2 !px-2">
                     <Typography>This Week</Typography>
