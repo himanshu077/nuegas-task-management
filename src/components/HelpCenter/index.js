@@ -10,7 +10,7 @@ const HelpCenter = () => {
                 <Typography className='!text-white !text-3xl !w-12 !h-12 !bg-[--Secondary-500] !flex !justify-center !items-center !rounded-full !border-4 border-white'>?</Typography>
             </Box>
             <Box
-                className="!w-[11vw] !h-52 !bg-[--Secondary-500] !rounded-lg !flex !p-4 !flex-col !gap-3"
+                className="!w-[11vw] !h-60 !bg-[--Secondary-500] !rounded-lg !flex !p-4 !flex-col !gap-4"
                 sx={{ backgroundImage: `url(${Background1}) url(${Background2})` }}
             >
                 <Typography className='PlusJakartaSans600 !text-white !text-base !text-center !mt-4'>Help Center</Typography>
