@@ -20,7 +20,7 @@ The live version of this project is deployed and accessible [here](https://nuega
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/task-management-dashboard.git
+git clone https://github.com/himanshu077/task-management-dashboard.git
 ```
 
 2. Navigate into the project directory:
