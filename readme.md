@@ -1,36 +1,52 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Task Management Dashboard
 
-## Getting Started
+This project is a Task Management Dashboard built with Next.js 14, styled using Tailwind CSS, and utilizing Material UI for component library. It also incorporates dayjs for date manipulation.
 
-First, run the development server:
+## Preview
+
+You can preview the design on Figma [here](https://www.figma.com/file/vo4OQKy9epNniNdLzsO22H/Task-Management-Dashboard---Pickolab-Studio-%28Community%29?type=design&node-id=2-2552&mode=design&t=mIVVOAzLgPpCr6Ad-0).
+
+The live version of this project is deployed and accessible [here](https://nuegas-task-management.vercel.app/).
+
+## Technologies Used
+
+- **Next.js 14**: Next.js is a React framework that enables functionality like server-side rendering and generating static websites for React-based web applications.
+- **Tailwind CSS**: Tailwind CSS is a utility-first CSS framework that helps in building custom designs quickly by providing low-level utility classes.
+- **Material UI**: Material UI is a popular React component library that provides a set of pre-designed and customizable components following Google's Material Design guidelines.
+- **dayjs**: dayjs is a minimalist JavaScript library that provides a simple API for parsing, validating, manipulating, and displaying dates and times.
+
+## Setup Instructions
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/your-username/task-management-dashboard.git
+```
+
+2. Navigate into the project directory:
+
+```bash
+cd task-management-dashboard
+```
+
+3. Install dependencies:
+
+```bash
+npm install
+```
+
+4. Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+5. Open [http://localhost:3000](http://localhost:3000) in your browser to view the project.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Contributing
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Contributions are welcome! Feel free to open issues or pull requests to suggest features, report bugs, or make improvements.
 
-## Learn More
+## License
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+This project is licensed under the [MIT License](LICENSE).
